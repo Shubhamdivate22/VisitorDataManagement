@@ -16,25 +16,25 @@ import org.springframework.web.bind.annotation.RestController;
 import com.jsp.visitorDataManagement.entity.Visitor;
 import com.jsp.visitorDataManagement.service.VisitorService;
 
-@RestController
+@RestController  // It is combination of @Controller and @ResponseBody
 public class VisitorController
 {
-	@Autowired
+	@Autowired  // It is used ton perform dependency injection
 	private VisitorService visitorService;
 	
-	@PostMapping("/visitor")
+	@PostMapping("/visitor")   // It is composed annotation that acts as a shortcut for @RequestMapping(method= RequestMethod.Post)
 	public @ResponseBody Visitor saveVisitor(@RequestBody Visitor visitor)
 	{
 		return visitorService.saveVisitor(visitor);
 	}
 	
-	@PutMapping("/visitor")
+	@PutMapping("/visitor")  // It is composed annotation that acts as a shortcut for @RequestMapping(method= RequestMethod.Put)
 	public @ResponseBody Visitor updateVisitor(@RequestBody Visitor visitor)
 	{
 		return visitorService.updateVisitor(visitor);
 	}
 	
-	@GetMapping("/visitor")
+	@GetMapping("/visitor")   // It is composed annotation that acts as a shortcut for @RequestMapping(method= RequestMethod.Get)
 	public @ResponseBody List<Visitor> getAllVisitor()
 	{
 		return visitorService.getAllVisitor();
@@ -46,7 +46,7 @@ public class VisitorController
 		return visitorService.getVisitorDataById(id);
 	}
 	
-	@DeleteMapping("/visitor")
+	@DeleteMapping("/visitor")   // It is composed annotation that acts as a shortcut for @RequestMapping(method= RequestMethod.Delete)
 	public @ResponseBody Visitor deleteVisitorDataById(@RequestParam("id") int id)
 	{
 		return visitorService.deleteVisitorDataById(id);

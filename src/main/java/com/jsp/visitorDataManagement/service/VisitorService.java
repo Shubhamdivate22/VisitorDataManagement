@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.jsp.visitorDataManagement.entity.Visitor;
 import com.jsp.visitorDataManagement.repository.VisitorDAO;
 
-@Service
+@Service  // This annotation is used to create a bean and provide identification as a service class
 public class VisitorService
 {
 	@Autowired

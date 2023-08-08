@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.jsp.visitorDataManagement.entity.Visitor;
 
-@Repository
+@Repository  // This annotation is used to create a bean and provide identification as a repository class
 public class VisitorDAO 
 {
 	@Autowired
